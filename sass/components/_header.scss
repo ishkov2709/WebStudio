@@ -243,7 +243,7 @@
         width: 100%;
         height: 4px;
     
-        background: var(--pressed-state);
+        background: $colorAccentConvert;
     
         border-radius: 2px;
     }
@@ -263,7 +263,7 @@
 
 @media screen and (min-width: 768px) {
     .address-link {
-        color: var(--text);
+        color: $colorPrimaryText;
 
         font-style: normal;
         font-size: 12px;
@@ -271,7 +271,7 @@
 
         letter-spacing: 0.04em;
 
-        transition: color var(--time-function);
+        @include animationFunction(color);
     }
 }
 
