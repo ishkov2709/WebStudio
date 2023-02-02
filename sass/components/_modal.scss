@@ -1,0 +1,259 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(46, 47, 66, 0.4);
+
+    opacity: 1;
+
+    @include animationFunction(opacity);
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+
+    padding-top: 72px;
+    padding-bottom: 24px;
+
+    background-color: $colorModalWhite;
+    border-radius: 4px;
+
+    font-size: 12px;
+    line-height: 1.33;
+
+    @include animationFunction(transform);
+
+        @media screen and (max-width: 768px) {
+                width: 392px;
+    
+                padding-left: 16px;
+                padding-right: 16px;
+        }
+    
+        @media screen and (min-width: 768px) {
+                width: 408px;
+    
+                padding-left: 24px;
+                padding-right: 24px;
+        }
+}
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.8);
+}
+
+.modal-close-button {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+
+    @include optionsFlex(flex, center, center);
+
+    width: 24px;
+    height: 24px;
+
+    background: var(--accent);
+    color: #000000;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+
+    transition: background $timeFunction, color $timeFunction;
+}
+
+.button-icon {
+    fill: currentColor;
+}
+
+.modal-close-button:hover,
+.modal-close-button:focus {
+    background: $colorAccentConvert;
+    color: $colorPrimaryWhite;
+}
+
+.userform .title {
+    display: block;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.input-user {
+    margin-bottom: 16px;
+}
+
+.form-field {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.label-name {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--subtle-text);
+
+    letter-spacing: 0.04em;
+}
+
+.input-box {
+    position: relative;
+    display: block;
+}
+
+.input-form {
+    width: 100%;
+
+    padding: 8px 16px 8px 38px;
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    outline: none;
+
+    @include animationFunction(border-color);
+}
+
+.input-form:focus,
+.comment-form:focus {
+    border-color: $colorAccent;
+}
+
+.input-icon {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+
+    fill: $colorPrimaryDark;
+
+    @include animationFunction(fill);
+}
+
+.input-form:focus+.input-icon {
+    fill: $colorAccent;
+}
+
+.comment-form {
+    display: block;
+
+    width: 100%;
+    height: 120px;
+
+    padding: 8px 16px;
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    resize: none;
+
+    outline: none;
+
+    @include animationFunction(border-color);
+}
+
+.checkbox-form-field {
+    @include optionsFlex(flex, start, center);
+
+    margin-bottom: 24px;
+}
+
+.checkbox-form {
+    appearance: none;
+
+        &:checked+.custom-checkbox {
+            background: $colorAccentConvert;
+    
+            border: 1.25px solid $colorAccentConvert;
+        }
+    
+        &:checked+.custom-checkbox .custom-icon {
+            transform: scale(1);
+    
+            opacity: 1;
+        }
+    
+        &:focus+.custom-checkbox {
+            outline: 1px solid #000000;
+        }
+}
+
+.custom-checkbox {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+
+    margin-right: 8px;
+
+    background: inherit;
+
+    border: 1.25px solid #2e2f42;
+    border-radius: 2px;
+
+    @include animationFunction(background);
+}
+
+.custom-icon {
+    margin: -1px;
+
+    opacity: 0;
+
+    transform: scale(0.6);
+
+    @include animationFunction(transform);
+}
+
+.policy-link {
+    color: $colorAccent;
+    text-decoration: underline;
+}
+
+#send {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    min-width: 169px;
+
+    padding: 14px 31px;
+
+    background: $colorAccent;
+    color: $colorPrimaryWhite;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border-color: transparent;
+
+    @include animationFunction(background);
+
+        &:hover,
+        &:focus {
+            background: $colorAccentConvert;
+        }
+}
+

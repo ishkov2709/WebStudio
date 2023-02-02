@@ -1,0 +1,46 @@
+@media screen and (max-width: 1157px) {
+
+    .section,
+    footer {
+        padding: 96px 0;
+    }
+
+    .portfolio.section {
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .team.section {
+        padding-bottom: 104px;
+    }
+
+    .portfolio.section {
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .section {
+        padding: 120px 0;
+    }
+
+    .team.section {
+        padding-bottom: 120px;
+    }
+
+    .explan.section {
+        padding-top: 0;
+    }
+
+    .portfolio.section {
+        padding-top: 96px;
+        padding-bottom: 120px;
+    }
+
+    footer {
+        padding: 100px 0;
+    }
+}

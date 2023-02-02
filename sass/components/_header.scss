@@ -1,0 +1,289 @@
+/**
+  |============================
+  | Header Button
+  |============================
+*/
+.menu-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    background: transparent;
+    border: none;
+
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
+}
+
+/**
+  |============================
+  | Mobile Menu
+  |============================
+*/
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+
+    background-color: $colorPrimaryWhite;
+
+    opacity: 0;
+    pointer-events: none;
+
+    overflow-y: scroll;
+
+    z-index: 1;
+
+    @include animationFunction(opacity);
+
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
+}
+
+.menu-box {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    min-width: 428px;
+
+    padding: 80px 40px 40px;
+
+    min-width: 428px;
+    height: 100vh;
+}
+
+.is-open {
+    opacity: 1;
+
+    pointer-events: all;
+}
+
+.menu-close-button {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+
+    width: 24px;
+    height: 24px;
+
+    @include optionsFlex(flex, center, center);
+
+    background-color: $colorSecondaryLight;
+
+    @include bordered(rgba(0, 0, 0, 0.1));
+    border-radius: 50%;
+}
+
+.mob-menu-list {
+    @extend %items;
+    margin-bottom: auto;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+}
+
+.mob-menu-item {
+    display: block;
+}
+
+.mob-menu-item:not(:last-child),
+.contact-item:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+.mob-menu-link {
+    color: $colorPrimaryDark;
+
+    @include animationFunction(color)
+}
+
+.mob-menu-link:hover,
+.mob-menu-link:focus,
+.mob-menu-link.current {
+    color: $colorAccentConvert;
+}
+
+
+.contact-list {
+    @extend %items;
+    margin-bottom: 48px;
+
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.5;
+
+    .contact-link {
+        color: $colorPrimaryText;
+
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+
+        transition: color $timeFunction, font-weight $timeFunction,
+            font-size $timeFunction, line-height $timeFunction;
+
+        &:hover {
+            color: $colorAccentConvert;
+
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 1.11;
+        }
+    }
+}
+
+.mob-social-list {
+    display: flex;
+    gap: 56px;
+}
+
+.mob-social-list {
+    @extend %items
+}
+
+.mob-social-link {
+    @include optionsFlex(flex, center, center);
+
+    background-color: $colorAccent;
+
+    border-radius: 50px;
+    color: $colorLight;
+
+    width: 40px;
+    height: 40px;
+
+    @include animationFunction(background);
+
+        &:hover,
+        &:focus {
+        background: $colorAccentConvert;
+    }
+}
+
+.social-icon {
+    fill: currentColor;
+}
+
+/**
+  |============================
+  | Nav and Address
+  |============================
+*/
+
+// Nav
+
+.nav-box {
+
+    @media screen and (max-width: 767px) {
+        display: none
+    }
+    
+    @media screen and (min-width: 768px) {
+        margin-right: 118px;
+    }
+    @media screen and (min-width: 1158px) {
+        margin-right: 332px;
+    }
+
+}
+
+
+
+.nav-list {
+    @extend %items;
+    @include optionsFlex(flex, center, start);
+    gap: 40px;
+}
+
+.nav-link {
+    display: block;
+
+    padding-top: 24px;
+    padding-bottom: 22px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+
+    @include animationFunction(color);
+
+    @media screen and (min-width: 1158px) {
+        padding-bottom: 28px;
+    }
+
+    &:hover,
+    &:focus {
+        color: $colorAccentConvert;
+    }
+
+    &.current {
+        position: relative;
+    
+        color: $colorAccentConvert;
+    }
+
+    &.current::after {
+        content: '';
+    
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    
+        width: 100%;
+        height: 4px;
+    
+        background: var(--pressed-state);
+    
+        border-radius: 2px;
+    }
+}
+
+/* Address */
+
+.address-list {
+    @extend %items;
+}
+
+@media screen and (max-width: 767px) {
+    .address-box {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .address-link {
+        color: var(--text);
+
+        font-style: normal;
+        font-size: 12px;
+        line-height: 1.33;
+
+        letter-spacing: 0.04em;
+
+        transition: color var(--time-function);
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .address-list {
+        display: flex;
+        gap: 40px;
+    }
+
+    .address-link {
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+    }
+}

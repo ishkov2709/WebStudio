@@ -1,0 +1,178 @@
+footer {
+  background-color: $colorPrimaryDark;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-box {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 72px;
+
+    width: 496px;
+
+    margin-left: auto;
+    margin-right: 148px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .footer-box {
+    flex-wrap: nowrap;
+    gap: 0;
+
+    width: 100%;
+
+    margin: 0;
+  }
+}
+
+.logo-tagline-box {
+  width: 268px;
+}
+
+.tagline-text {
+  margin: 0 auto;
+
+  color: $colorSecondaryLight;
+
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.social-footer-box {
+  width: 208px;
+}
+
+@media screen and (max-width: 767px) {
+  .logo-tagline-box,
+  .social-footer-box {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 72px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .logo-tagline-box {
+    margin-right: 120px;
+  }
+  .social-footer-box {
+    margin-right: 80px;
+  }
+}
+
+.social-footer-box .title,
+.subscribe-form .title {
+  margin-bottom: 16px;
+
+  color: $colorPrimaryWhite;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 768px) {
+  .social-footer-box .title,
+  .subscribe-form .title {
+    text-align: start;
+  }
+
+  .logo-tagline-box {
+    width: 264px;
+  }
+
+  .subscribe-form {
+    width: 453px;
+  }
+}
+
+.social-footer-box .social-list {
+  gap: 16px;
+}
+
+.social-footer-box .social-link {
+  background: rgba(255, 255, 255, 0.1);
+
+  @include animationFunction(background);
+}
+
+.social-footer-box .social-link:hover,
+.social-footer-box .social-link:focus {
+  background: $colorAccentAlt;
+}
+
+.input-subscribe {
+  width: 100%;
+
+  margin-bottom: 16px;
+  padding: 7px 16px;
+
+  background: transparent;
+  color: $colorPrimaryWhite;
+
+  font-size: 12px;
+  line-height: 2;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+
+  @include animationFunction(border-color);
+
+  outline: none;
+}
+
+.input-subscribe:focus {
+  border-color: $colorAccentAlt;
+}
+
+.subscribe-button {
+  @include optionsFlex(flex, start, center);
+  gap: 16px;
+
+  width: 165px;
+
+  margin-left: auto;
+  margin-right: auto;
+  padding: 6px 22px;
+
+  background: $colorAccent;
+  color: $colorPrimaryWhite;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+
+  border-radius: 4px;
+  border-color: transparent;
+
+  @include animationFunction(background);
+}
+
+.subscribe-icon {
+  fill: currentColor;
+}
+
+.subscribe-button:hover,
+.subscribe-button:focus {
+  background: $colorAccentConvert;
+}
+
+@media screen and (min-width: 768px) {
+  .subscribe-box {
+    display: flex;
+    gap: 24px;
+  }
+
+  .input-subscribe {
+    width: 264px;
+
+    margin: 0;
+  }
+
+  .subscribe-button {
+    margin: 0;
+  }
+}

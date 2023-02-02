@@ -1,0 +1,13 @@
+@mixin optionsFlex ($display, $justify, $align) {
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin animationFunction ($property) {
+    transition: $property $timeFunction;
+}
+
+@mixin bordered($color) {
+    border: 1px solid $color;
+}
