@@ -3,7 +3,7 @@
   | Header Button
   |============================
 */
-.menu-button {
+.js-open-menu {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,7 +27,7 @@
   |============================
 */
 
-.mobile-menu {
+.js-menu-container {
     position: fixed;
     top: 0;
     left: 0;
@@ -70,7 +70,7 @@
     pointer-events: all;
 }
 
-.menu-close-button {
+.js-close-menu {
     position: absolute;
     top: 40px;
     right: 40px;

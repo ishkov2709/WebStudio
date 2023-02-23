@@ -10,19 +10,19 @@
   <body>
     <!-- Page Header -->
     <header>
-      <div class="pf-head container">
+      <div class="container">
         <a href="./index.html" class="logo top"
           ><span class="logo-accent">Web</span>Studio</a
         >
-        <button type="button" class="menu-button" data-menu-open>
+        <button type="button" class="js-open-menu" data-menu-open>
           <svg class="open-close-icon" width="32" height="22">
             <use href="./images/icons.svg#burger"></use>
           </svg>
         </button>
         <!-- Mobile Menu -->
-        <div class="mobile-menu" data-menu>
+        <div class="js-menu-container" data-menu>
           <div class="menu-box">
-            <button type="button" class="menu-close-button" data-menu-close>
+            <button type="button" class="js-close-menu" data-menu-close>
               <svg class="close-icon" width="8" height="8">
                 <use href="./images/icons.svg#close"></use>
               </svg>
@@ -38,82 +38,84 @@
                 <a href="" class="mob-menu-link current">Contacts</a>
               </li>
             </ul>
-            <ul class="contact-list">
-              <li class="contact-item">
-                <a href="tel:+110001111111" class="contact-link"
-                  >+11 (000) 111-11-11</a
-                >
-              </li>
-              <li class="contact-item">
-                <a href="mailto:info@devstudio.com" class="contact-link"
-                  >info@devstudio.com</a
-                >
-              </li>
-            </ul>
-            <ul class="mob-social-list">
-              <li class="mob-social-item">
-                <a
-                  class="mob-social-link"
-                  href="https://www.instagram.com/"
-                  aria-label="Instagram-Link"
-                  rel="nofollow noopener noreferrer"
-                  target="_blank"
-                >
-                  <svg class="social-icon" width="24" height="24">
-                    <use href="./images/icons.svg#instagram"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="mob-social-item">
-                <a
-                  class="mob-social-link"
-                  href="https://twitter.com"
-                  aria-label="Twitter-Link"
-                  rel="nofollow noopener noreferrer"
-                  target="_blank"
-                >
-                  <svg class="social-icon" width="24" height="24">
-                    <use href="./images/icons.svg#twitter"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="mob-social-item">
-                <a
-                  class="mob-social-link"
-                  href="https://uk-ua.facebook.com"
-                  aria-label="Facebook-Link"
-                  rel="nofollow noopener noreferrer"
-                  target="_blank"
-                >
-                  <svg class="social-icon" width="24" height="24">
-                    <use href="./images/icons.svg#facebook"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="mob-social-item">
-                <a
-                  class="mob-social-link"
-                  href="https://ua.linkedin.com"
-                  aria-label="LinkedIn-Link"
-                  rel="nofollow noopener noreferrer"
-                  target="_blank"
-                >
-                  <svg class="social-icon" width="24" height="24">
-                    <use href="./images/icons.svg#linkedin"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
+            <div class="contact-box">
+              <ul class="contact-list">
+                <li class="contact-item">
+                  <a href="tel:+110001111111" class="contact-link"
+                    >+11 (000) 111-11-11</a
+                  >
+                </li>
+                <li class="contact-item">
+                  <a href="mailto:info@devstudio.com" class="contact-link"
+                    >info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+              <ul class="mob-social-list">
+                <li class="mob-social-item">
+                  <a
+                    class="mob-social-link"
+                    href="https://www.instagram.com/"
+                    aria-label="Instagram-Link"
+                    rel="nofollow noopener noreferrer"
+                    target="_blank"
+                  >
+                    <svg class="social-icon" width="24" height="24">
+                      <use href="./images/icons.svg#instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="mob-social-item">
+                  <a
+                    class="mob-social-link"
+                    href="https://twitter.com"
+                    aria-label="Twitter-Link"
+                    rel="nofollow noopener noreferrer"
+                    target="_blank"
+                  >
+                    <svg class="social-icon" width="24" height="24">
+                      <use href="./images/icons.svg#twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="mob-social-item">
+                  <a
+                    class="mob-social-link"
+                    href="https://uk-ua.facebook.com"
+                    aria-label="Facebook-Link"
+                    rel="nofollow noopener noreferrer"
+                    target="_blank"
+                  >
+                    <svg class="social-icon" width="24" height="24">
+                      <use href="./images/icons.svg#facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="mob-social-item">
+                  <a
+                    class="mob-social-link"
+                    href="https://ua.linkedin.com"
+                    aria-label="LinkedIn-Link"
+                    rel="nofollow noopener noreferrer"
+                    target="_blank"
+                  >
+                    <svg class="social-icon" width="24" height="24">
+                      <use href="./images/icons.svg#linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <!-- Navigation and Address -->
         <nav class="nav-box">
           <ul class="nav-list">
             <li class="nav-item">
-              <a href="./index.html" class="nav-link">Studio</a>
+              <a href="./index.html" class="nav-link current">Studio</a>
             </li>
             <li class="nav-item">
-              <a href="./portfolio.html" class="nav-link current">Portfolio</a>
+              <a href="./portfolio.html" class="nav-link">Portfolio</a>
             </li>
             <li class="nav-item"><a href="" class="nav-link">Contacts</a></li>
           </ul>
@@ -480,5 +482,6 @@
       </div>
     </footer>
     <script src="./js/mobile-menu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/body-scroll-lock@4.0.0-beta.0/lib/bodyScrollLock.min.js"></script>
   </body>
 </html>
