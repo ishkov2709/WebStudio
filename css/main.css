@@ -1328,6 +1328,8 @@ footer {
   left: 50%;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
+  padding-left: 16px;
+  padding-right: 16px;
   padding-top: 72px;
   padding-bottom: 24px;
   background-color: #fcfcfc;
@@ -1344,11 +1346,9 @@ footer {
     width: 320px;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 428px) {
   .modal {
     width: 392px;
-    padding-left: 16px;
-    padding-right: 16px;
   }
 }
 @media screen and (min-width: 768px) {

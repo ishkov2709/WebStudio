@@ -24,6 +24,8 @@
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
 
+    padding-left: 16px;
+    padding-right: 16px;
     padding-top: 72px;
     padding-bottom: 24px;
 
@@ -39,11 +41,8 @@
                 width: 320px;
         }
 
-        @media screen and (max-width: 767px) {
+        @media screen and (min-width: 428px) {
                 width: 392px;
-
-                padding-left: 16px;
-                padding-right: 16px;
         }
     
         @media screen and (min-width: 768px) {
