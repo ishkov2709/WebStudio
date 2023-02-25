@@ -31,8 +31,8 @@
     position: fixed;
     top: 0;
     left: 0;
-    min-width: 100%;
-    min-height: 100%;
+    width: 100%;
+    height: 100%;
 
     background-color: $colorPrimaryWhite;
 
@@ -55,13 +55,11 @@
 
     display: flex;
     flex-direction: column;
-
-    min-width: 428px;
+    
+    min-width: 320px;
+    height: 100vh;
 
     padding: 80px 40px 40px;
-
-    min-width: 428px;
-    height: 100vh;
 }
 
 .is-open {
@@ -147,11 +145,18 @@
 
 .mob-social-list {
     display: flex;
-    gap: 56px;
 }
 
 .mob-social-list {
     @extend %items
+}
+
+.mob-social-item +.mob-social-item {
+    margin-left: auto;
+
+    @media screen and (min-width: 428px) {
+        margin-left: 56px;
+    }
 }
 
 .mob-social-link {

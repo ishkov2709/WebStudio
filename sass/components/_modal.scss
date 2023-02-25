@@ -35,9 +35,13 @@
 
     @include animationFunction(transform);
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 428px) {
+                width: 320px;
+        }
+
+        @media screen and (max-width: 767px) {
                 width: 392px;
-    
+
                 padding-left: 16px;
                 padding-right: 16px;
         }
